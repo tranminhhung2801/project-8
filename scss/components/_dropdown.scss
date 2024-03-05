@@ -1,0 +1,124 @@
+@use "../abtracts";
+
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    width: min(1240px, 100%);
+    padding-top: 54px;
+    display: none;
+    &__inner {
+        --inner-padding: 30px;
+        position: relative;
+        padding: var(--inner-padding);
+        border-radius: 20px;
+        background: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+        &::before {
+            content: url("../icons/dropdown-arrow.svg");
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50%;
+            filter: var(--dropdown-arrow-color);
+        }
+    }
+}
+
+.top-menu {
+    max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+    --main-column-width: 292px;
+    position: relative;
+    &__main {
+        width: 292px;
+        max-height: inherit;
+        width: var(--main-column-width);
+        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        border-right: 1px solid var(--top-menu-boder-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column{
+    display: flex;
+    gap: 14px;
+    +.menu-column{
+        margin-top: 20px;
+    }
+    &__icon{
+        flex-shrink: 0;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        @include abtracts.breakpoint(xl){
+            display: none;
+        }
+    }
+
+    &__icon-1{
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+    &__icon-2{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        right: 0;
+        bottom: 0;
+        filter: var(--menu-column-icon-color);
+    }
+
+    &__content{
+        flex: 1;
+    }
+
+    &__heading{
+        color: var(--text-color);
+        font-size: 1.6rem;
+        line-height: 150%;
+        margin-top: 4px;
+        font-weight: 500;
+        @include abtracts.breakpoint(lg){
+            box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+        }
+    }
+
+    &__list {
+        margin-top: 19px;
+    }
+
+
+    &__item{
+            &--active .sub-menu{
+                display: grid;
+            }
+    }
+
+    &__item--active > &__link,
+    &__item:hover > &__link {
+        color: #0071dc;
+        font-weight: 500;
+    }
+
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+    }
+
+}
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--inner-padding);
+    padding-left: var(--inner-padding);
+    overflow-y: auto;
+}
+
+
+

@@ -1,0 +1,26 @@
+@use "../abtracts";
+html{
+    --text-color:#1a162e;
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%) 
+        saturate(6164%) hue-rotate(213deg) brightness(98%) contrast(95%);
+    --topbar-bg-color:#EEE;    
+    --header-bg-color:#eee;
+    --body-bg:#f6f6f6;
+    --top-act-group-bg-color:#FFFFFF;
+    --top-act-group-shadow:rgba(237, 237, 246, 0.20);
+    --top-act-group-separate:#ededf6;
+
+    
+    //DropDown
+    --Secondary-Color-Background: #FFF;
+    --dropdown-shadow-bg:rgba(0, 0, 0, 0.20);
+    @include abtracts.breakpoint(lg){
+        --header-bg-color:#fff;
+        --header-shadow-color:rgba(237, 237, 246, 0.20);
+    }
+
+    --top-menu-boder-color:#D2D1D6;
+    --menu-column-icon-color:brightness(0) saturate(100%) invert(8%) sepia(11%) 
+    saturate(3969%) hue-rotate(212deg) brightness(97%) contrast(95%);
+
+}
