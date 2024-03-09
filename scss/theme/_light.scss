@@ -12,12 +12,14 @@ html{
 
     
     //DropDown
+    
     --Secondary-Color-Background: #FFF;
     --dropdown-shadow-bg:rgba(0, 0, 0, 0.20);
     @include abtracts.breakpoint(lg){
         --header-bg-color:#fff;
         --header-shadow-color:rgba(237, 237, 246, 0.20);
     }
+    --dropdown-arrow-color:#fff;
 
     --top-menu-boder-color:#D2D1D6;
     --menu-column-icon-color:brightness(0) saturate(100%) invert(8%) sepia(11%) 
