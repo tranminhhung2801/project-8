@@ -32,7 +32,7 @@
 @media (max-width: 991.98px) {
   .navbar {
     position: fixed;
-    inset: 0 50% 0 0;
+    inset: 0 30% 0 0;
     z-index: 9;
     margin-left: 0;
     background: #fff;
@@ -82,6 +82,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    overflow-y: auto;
+    height: calc(100% - 20px);
   }
 }
 .navbar__link {
@@ -108,8 +110,23 @@
     width: 100%;
   }
   .navbar__item:hover .dropdown {
-    display: block;
+    display: none;
   }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
+}
+.navbar__arrow {
+  margin-top: 3px;
+}
+@media (max-width: 991.98px) {
+  .navbar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.3s;
+  }
+}
+.navbar__item--active .navbar__arrow {
+  rotate: 0deg;
 }
 
 .top-act {

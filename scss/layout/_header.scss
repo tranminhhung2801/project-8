@@ -17,11 +17,10 @@
     position: relative;
     
     background: var(--topbar-bg-color);
+
     @include abtracts.breakpoint(md){
         justify-content: space-between;
-    }
-    
-    
+    }    
 }
 
 .navbar{
@@ -29,7 +28,7 @@
     @include abtracts.breakpoint(lg){
         // display: none;
         position: fixed;
-        inset: 0 50% 0 0;
+        inset: 0 30% 0 0;
         z-index: 9;
         margin-left:0 ;
         background: #fff;
@@ -80,6 +79,8 @@
             flex-direction: column;
             align-items: flex-start;
             padding: 20px;
+            overflow-y: auto;
+            height: calc(100% - 20px);
         }
     }
 
@@ -104,11 +105,26 @@
             display: block;
         }
         @include abtracts.breakpoint(lg){
-            &:hover .dropdown{
-            display: block;
-        }
             width: 100%;
+            &:hover .dropdown{
+                display: none;
+            }
+            &--active .dropdown{
+                display: block !important;
+            }
         }
+    }
+
+    &__arrow{
+        margin-top: 3px;
+        @include abtracts.breakpoint(lg){
+            rotate: -90deg;
+            transition: rotate 0.3s;
+        }
+    }
+
+    &__item--active &__arrow{
+        rotate: 0deg;
     }
     
    

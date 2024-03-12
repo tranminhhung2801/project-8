@@ -7,6 +7,12 @@
     width: min(1240px, 100%);
     padding-top: 54px;
     display: none;
+    @include abtracts.breakpoint(lg){
+        padding-top: 0;
+        position: initial;
+    }
+
+
     &__inner {
         --inner-padding: 30px;
         position: relative;
@@ -22,6 +28,17 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+        
+        @include abtracts.breakpoint(lg){
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            padding-left: 0;
+            padding: 10px 0px;
+            &::before{
+                content: none;
+            }
+        }
     }
 }
 
@@ -36,6 +53,12 @@
         height: var(--max-height);
         border-right: 1px solid var(--top-menu-boder-color);
         overflow-y: auto;
+
+        @include abtracts.breakpoint(lg){
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -50,9 +73,13 @@
         position: relative;
         width: 36px;
         height: 36px;
-        @include abtracts.breakpoint(xl){
-            display: none;
-        }
+        // @include abtracts.breakpoint(xl){
+        //     display: none;
+        // }
+
+        // @include abtracts.breakpoint(lg){
+        //     display: block;
+        // }
     }
 
     &__icon-1{
@@ -87,6 +114,9 @@
 
     &__list {
         margin-top: 19px;
+        @include abtracts.breakpoint(lg){
+            margin-top: 20px;
+        }
     }
 
 
@@ -107,6 +137,10 @@
         padding: 7px 0;
         font-size: 1.4rem;
         line-height: 142.857%;
+
+        @include abtracts.breakpoint(lg){
+            font-weight: 400;
+        }
     }
 
 }
@@ -119,6 +153,14 @@
     padding-left: var(--inner-padding);
     overflow-y: auto;
 
+    @include abtracts.breakpoint(lg){
+        position: initial;
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        margin-top: 14px;
+    }
+
+
     &--not-main{
         position: initial;
         inset: initial;
@@ -126,6 +168,11 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-height);
         padding-left:0 ;
+
+        @include abtracts.breakpoint(lg){
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 }
 
