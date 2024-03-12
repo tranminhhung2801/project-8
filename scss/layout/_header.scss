@@ -20,38 +20,98 @@
     @include abtracts.breakpoint(md){
         justify-content: space-between;
     }
-    &__more{
-        display: none;
-        @include abtracts.breakpoint(lg){
-            display: block;
-        }
-    }
+    
     
 }
 
 .navbar{
     margin-left: 144px;
     @include abtracts.breakpoint(lg){
+        // display: none;
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 9;
+        margin-left:0 ;
+        background: #fff;
+        padding: 20px 0;
+        translate:-100% ;
+        transition: 0.5s;
+        &.show{
+            translate: 0;
+        }
+
+        &.show ~ &__overlay{
+            visibility: visible;
+            opacity: 1;
+
+        }
+    }
+
+    &__overlay{
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        
+
+        @include abtracts.breakpoint(lg){
+            
+            position: fixed;
+            inset: 0;
+            background: rgba($color: #000000, $alpha: 0.4);
+            z-index: 8;
+            transition: opacity,visibility;
+            transition-duration:0.5s ;
+        }
+    }
+
+    &__close{
         display: none;
+        @include abtracts.breakpoint(lg){
+            display: block;
+            padding: 10px 20px;
+        }
     }
 
     &__list{
         display: flex;
         align-items: center;
         gap: 30px;
+        @include abtracts.breakpoint(lg){
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
     }
 
     &__link{
+        
         padding: 20px 0px;
         height: 50px;
         gap: 6px;
         font-size: 15px;
         font-weight: 500;
         line-height: 146.667% ;
+        @include abtracts.breakpoint(lg){
+            justify-content: space-between;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            padding-right: 20px;    
+        }
     }
-    &__item:hover .dropdown{
-        display: block;
+
+    &__item{
+        &:hover .dropdown{
+            display: block;
+        }
+        @include abtracts.breakpoint(lg){
+            &:hover .dropdown{
+            display: block;
+        }
+            width: 100%;
+        }
     }
+    
+   
 }
 
 .top-act{
