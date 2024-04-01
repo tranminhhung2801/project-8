@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +25,33 @@
    </script>
 
    <div class="container">
+        <!--Slideshow-->
+        <div class="slideshow">
+            <div class="slideshow__inner">
+                <div class="slideshow__item">
+                    <img src="/assets/img/slide/Group 19.png" alt="" class="slideshow__img">
+                </div>
+                <div class="slideshow__item">
+                    <img src="/assets/img/slide/Group 19.png" alt="" class="slideshow__img">
+                </div>
+                <div class="slideshow__item">
+                    <img src="/assets/img/slide/Group 19.png" alt="" class="slideshow__img">
+                </div>
+            </div>
 
+            <div class="slideshow__page">
+                <span class="slideshow__num">1</span>
+                <span class="slideshow__slider"></span>
+                <span class="slideshow__num">5</span>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+        <script>
+        load("#footer","./template/footer.html");
+        </script>
    </div>
-   <footer id="footer"></footer>
-   <script>
-    load("#footer","./template/footer.html");
-   </script>
+   
 </body>
 </html>
 
