@@ -3,10 +3,10 @@
 .header{
     background: var(--header-bg-color);
     padding: 30px 0px;
-    @include abtracts.breakpoint(sm){
+    @include abtracts.screen(sm){
         padding: 16px 0px;
     }
-    @include abtracts.breakpoint(lg){
+    @include abtracts.screen(lg){
         padding: 20px 0px;
    
     }
@@ -15,17 +15,19 @@
     display: flex;
     align-items: center;
     position: relative;
-    
-    background: var(--topbar-bg-color);
-
-    @include abtracts.breakpoint(md){
+   z-index: 1;
+    @include abtracts.screen(lg) {
+        padding: 20px 0;
+    }
+    @include abtracts.screen(md) {
         justify-content: space-between;
-    }    
+        padding: 16px 0;
+    }  
 }
 
 .navbar{
     margin-left: 144px;
-    @include abtracts.breakpoint(lg){
+    @include abtracts.screen(lg){
         // display: none;
         position: fixed;
         inset: 0 30% 0 0;
@@ -52,7 +54,7 @@
         transition: 0.5s;
         
 
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             
             position: fixed;
             inset: 0;
@@ -65,7 +67,7 @@
 
     &__close{
         display: none;
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             display: block;
             padding: 10px 20px;
         }
@@ -75,7 +77,7 @@
         display: flex;
         align-items: center;
         gap: 30px;
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             flex-direction: column;
             align-items: flex-start;
             padding: 20px;
@@ -92,7 +94,7 @@
         font-size: 15px;
         font-weight: 500;
         line-height: 146.667% ;
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             justify-content: space-between;
             font-size: 1.6rem;
             line-height: 2.4rem;
@@ -104,7 +106,7 @@
         &:hover .dropdown{
             display: block;
         }
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             width: 100%;
             &:hover .dropdown{
                 display: none;
@@ -117,7 +119,7 @@
 
     &__arrow{
         margin-top: 3px;
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             rotate: -90deg;
             transition: rotate 0.3s;
         }
@@ -134,7 +136,7 @@
     display: flex;
     margin-left: auto;
     gap: 20px;
-    @include abtracts.breakpoint(md){
+    @include abtracts.screen(md){
         margin-left: 0; 
     }
 
@@ -146,12 +148,12 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-        @include abtracts.breakpoint(sm){
+        @include abtracts.screen(sm){
             display: none;
         }
     }
     &__group--single{
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             display: none;
         }
     }

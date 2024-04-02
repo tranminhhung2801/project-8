@@ -10,12 +10,13 @@ html.dark{
     --top-act-group-shadow:rgba(0, 0, 0, 0.20);
     --top-act-group-separate:#EDEDF6;
 
-    @include abtracts.breakpoint(lg){
+    @include abtracts.screen(lg){
         --header-bg-color:#171C28;
         --header-shadow-color:rgba(237, 237, 246, 0.20);
     }
     
     //DropDown
+    --dropdown-bg-color: #2f3441;
     --Secondary-Color-Background: #292E39;
     --dropdown-shadow-bg:rgba(23, 28, 40, 0.40);
     --dropdrown-arrow-color: brightness(0) saturate(100%) 
@@ -26,5 +27,9 @@ html.dark{
                     hue-rotate(206deg) brightness(110%) contrast(97%);
 
     //slidebar
-    --slidebar-bg:#292E39;                
+    --slidebar-title:#FFFFFF;
+    --slidebar-bg:#292E39;          
+    
+    --cate-item-bg:#171C28;
+    --cate-item-bg-thumb:#292E39;
 }

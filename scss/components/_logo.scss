@@ -5,11 +5,11 @@
     align-items: center;
     gap: 14px;
 
-    @include abtracts.breakpoint(lg){
+    @include abtracts.screen(lg){
         gap: 10px;
         margin-left: 40px;
     }
-    @include abtracts.breakpoint(sm){
+    @include abtracts.screen(sm){
         margin-left: 0;
     }
    
@@ -20,14 +20,14 @@
         font-weight: 700;
         line-height: 145.455%;
 
-    @include abtracts.breakpoint(lg){
+    @include abtracts.screen(lg){
         font-size: 1.8rem;
     }
 
 
     }
     &__img{
-        @include abtracts.breakpoint(lg){
+        @include abtracts.screen(lg){
             width: 24px;
         }
     }

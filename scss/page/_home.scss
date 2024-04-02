@@ -1,0 +1,22 @@
+@use "../abtracts";
+
+.home{
+    &__container{
+        margin-top: 40px;
+        @include abtracts.screen(md){
+            margin-top: 30px;
+        }
+    }
+    &__heading{
+        color: var(--slidebar-title);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;  
+        margin-bottom: 20px;
+    }
+
+    &__cate{
+        --grid-gutter-x:51px;
+    }
+    
+}
