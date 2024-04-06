@@ -43,8 +43,8 @@ $gutters: (
 }
 
 .container {
-    width: 1370px;
     @extend .container-fluid;
+    width: 1370px;
 }
 
 .row {
@@ -53,12 +53,12 @@ $gutters: (
     margin-top: calc(var(--grid-gutter-y) * -1);
     margin-left: calc(var(--grid-gutter-x) * 0.5 * -1);
     margin-right: calc(var(--grid-gutter-x) * 0.5 * -1);
-
     > * {
         margin-top: var(--grid-gutter-y);
         @extend %gutter-padding;
     }
 }
+
 
 .col {
     flex: 1 0;
@@ -69,7 +69,6 @@ $gutters: (
         @content;
     }
 }
-
 @mixin make-row-columns($infix: null) {
     @for $i from 1 through $grid-columns * 0.5 {
         .row-cols#{$infix}-#{$i} > * {
@@ -78,7 +77,6 @@ $gutters: (
         }
     }
 }
-
 @mixin make-columns($infix: null) {
     @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
@@ -126,7 +124,10 @@ $gutters: (
         .container {
             max-width: $max-width;
         }
-
+        @include make-row-columns($infix);
+        @include make-columns($infix);
+        @include make-offsets($infix);
+        @include make-gutters($infix);
         
     }
 }

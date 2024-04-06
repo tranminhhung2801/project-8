@@ -1,3 +1,6 @@
+@use "../abtracts";
+
+
 *, ::before , ::after {
     box-sizing: border-box;
 }
@@ -23,14 +26,26 @@ button{
     border: none;
     outline: none;
     background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 
 img,a,button,input,textarea ,select{
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
 }
 
 .icon{
     filter: var(--icon-color);
+}
+
+.container{
+    @include abtracts.screen(sm){
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 }

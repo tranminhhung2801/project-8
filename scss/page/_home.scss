@@ -17,6 +17,19 @@
 
     &__cate{
         --grid-gutter-x:51px;
+        @include abtracts.screen(xl){
+            --grid-gutter-x:20px;
+        }
+        @include abtracts.screen(md){
+            --grid-gutter-y:20px;
+        }
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
     }
     
 }
