@@ -143,6 +143,12 @@
   .top-act {
     margin-left: 0;
   }
+  .top-act__sign-up {
+    margin-left: 20px;
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 .top-act__group {
   display: flex;
@@ -206,6 +212,12 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
+}
+
+@media (max-width: 767.98px) {
+  .btn-text {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
