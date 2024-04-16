@@ -47,7 +47,19 @@ html.dark{
     --filter-form-shadow:rgba(0, 0, 0, 0.40);
     --filter-arrow-bg:var(--dropdrown-arrow-color);
 
+    //footer
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: #9e9da6;
+
+    //auth
     --auth-content-bg:#292E39;
     --auth-color:#B9BABE;
     --btn-color:#1A162E;
+    --auth-intro-bg:#171C28;
+
+    //product-detail
+    --product-detail-bg: #292e39;
+
+    --breadcrmbs-bg: #f6f6f6;
+    --breadcrmbs-shadow: rgba(237, 237, 246, 0.2);
 }

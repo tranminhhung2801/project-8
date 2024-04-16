@@ -1,4 +1,8 @@
 .product-card{
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
     padding: 16px;
     gap: 10px;
     background: var(--product-bg-color);
@@ -29,7 +33,7 @@
     }
 
     &__row{
-        margin-top: 16px;
+        margin-top: auto;
         display: flex;
         align-items: center;
     }

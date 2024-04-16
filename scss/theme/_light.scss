@@ -46,7 +46,16 @@ html{
     --filter-form-bg:#fff;
     --filter-form-shadow:rgba(200, 200, 200, 0.40);
 
+    //footer
+    --footer-bg-color: var(--header-bg-color);
 
     --auth-content-bg:#fff;
     --auth-color:#1A162E;
+
+    //product-page
+    --product-detail-bg: #fff;
+
+    --breadcrmbs-bg: #f6f6f6;
+    --breadcrmbs-shadow: rgba(237, 237, 246, 0.2);
+    
 }
