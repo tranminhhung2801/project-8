@@ -1,3 +1,4 @@
+@use "../abtracts";
 .form{
     &:has(:invalid) , &__submit-btn{
         opacity: 0.6s;
@@ -110,5 +111,70 @@
         margin-top: 10px;
         color: red;
         display: none;
+    }
+
+    &__label{
+        display: block;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 145.455% ;
+
+        &-small{
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 142.857%;
+        }
+    }
+
+    &__select-wrap{
+        border-radius: 6px;
+        border: 1px solid #D2D1D6;
+        display: flex;
+            align-items: center;
+            height: 45px;
+    }
+
+    &__select{
+        height: calc(100% - 10px);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         font-size: 14px;
+         font-weight: 500;
+         line-height:  142.857%;
+         padding: 0 14px;
+         min-width: var(--width,110px);
+     }
+
+     &__select +&__select{
+         border-left: 1px solid #D2D1D6;
+     }
+
+     &__select-arrow{
+        width: 16px;
+        filter: var(--icon-color);
+    }
+
+    &__tags{
+        display: flex;
+        gap: 20px;
+        
+    }
+    &__tag{
+        border-radius: 6px;
+        color: #9e9da8;
+        background: var(--product-bg-color);
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 142.857% ;
+
+        &:hover{
+            color: var(--text-color);
+        }
+
+        @include abtracts.screen(sm){
+            padding: 6px 8px;
+        }
     }
 }

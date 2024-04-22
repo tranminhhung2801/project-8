@@ -5,6 +5,9 @@ html.dark{
         saturate(2%) hue-rotate(153deg) brightness(108%) contrast(100%);
     --topbar-bg-color:#171C28;    
     --body-bg:#292E39;
+    @include abtracts.screen(sm){
+        --body-bg:#292E39;
+    }
     --header-bg-color:#171C28;
     --top-act-group-bg-color:#292E39;
     --top-act-group-shadow:rgba(0, 0, 0, 0.20);
@@ -12,7 +15,7 @@ html.dark{
 
     @include abtracts.screen(lg){
         --header-bg-color:#171C28;
-        --header-shadow-color:rgba(237, 237, 246, 0.20);
+        --header-shadow-color:rgba(237, 237, 246, 0);
     }
     
     //DropDown
@@ -60,6 +63,15 @@ html.dark{
     //product-detail
     --product-detail-bg: #292e39;
 
-    --breadcrmbs-bg: #f6f6f6;
-    --breadcrmbs-shadow: rgba(237, 237, 246, 0.2);
+    --breadcrmbs-bg: #171C28;
+    --breadcrmbs-shadow: rgba(0, 0, 0, 0.2);
+
+    --prod-tag-bg:#292E39;
+    //prod info
+    --prod-info-bg:#171C28;
+    @include abtracts.screen(sm){
+        --prod-info-bg:#171C28;
+        --prod-tag-bg:#171C28;
+    }
+
 }

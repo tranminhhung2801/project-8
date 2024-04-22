@@ -5,7 +5,10 @@ html{
         saturate(6164%) hue-rotate(213deg) brightness(98%) contrast(95%);
     --topbar-bg-color:#EEE;    
     --header-bg-color:#eee;
-    --body-bg:#f6f6f6;
+    --body-bg:#F6F6F6;
+    @include abtracts.screen(sm){
+        --body-bg:#f6f6f6;
+    }
     --top-act-group-bg-color:#FFFFFF;
     --top-act-group-shadow:rgba(237, 237, 246, 0.20);
     --top-act-group-separate:#ededf6;
@@ -30,8 +33,11 @@ html{
     --icon:#FFFFFF;
 
     //container-home
-    --cate-item-bg:#eee;
-    --cate-item-bg-thumb:#fff;
+    --cate-item-bg:#EEE;
+    @include abtracts.screen(sm){
+        --cate-item-bg:#fff;
+    }
+    --cate-item-bg-thumb:#FFf;
 
     //filter 
     --filter-btn-color:#FFFFFF;
@@ -56,6 +62,15 @@ html{
     --product-detail-bg: #fff;
 
     --breadcrmbs-bg: #f6f6f6;
+    
     --breadcrmbs-shadow: rgba(237, 237, 246, 0.2);
+
+    //prod info
+    --prod-info-bg:#f6f6f6;
+    @include abtracts.screen(sm){
+        --prod-info-bg:#fff;
+        --breadcrmbs-bg:#fff;
+        --prod-tag-bg:#EDEDF6;
+    }
     
 }
