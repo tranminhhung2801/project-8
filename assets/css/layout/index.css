@@ -173,6 +173,7 @@
   padding: 13px;
 }
 .top-act__btn {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -217,6 +218,114 @@
 @media (max-width: 767.98px) {
   .btn-text {
     display: none !important;
+  }
+}
+
+.act-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: min(500px, 100vw);
+}
+@media (max-width: 991.98px) {
+  .act-dropdown {
+    top: 90px;
+  }
+}
+.act-dropdown__inner {
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--body-bg);
+  box-shadow: var(--header-shadown);
+}
+@media (max-width: 991.98px) {
+  .act-dropdown__inner {
+    padding: 15px;
+  }
+}
+.act-dropdown__arrow {
+  position: absolute;
+  top: -15px;
+  right: 90px;
+  height: 20.5px;
+  filter: var(--dropdrown-arrow-color);
+}
+.act-dropdown.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.act-dropdown__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.act-dropdown__title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.act-dropdown__view-all {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 145.455%;
+  color: #0071DC;
+}
+.act-dropdown__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: var(--dropdown-item-color);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 145.455%;
+}
+.act-dropdown__checkout {
+  display: flex;
+  justify-content: flex-end;
+}
+.act-dropdown__checkout-btn {
+  padding: 18px 40px;
+  border-radius: 50px !important;
+  min-width: 278px;
+}
+
+.cart-preview-item__thumb {
+  width: 175px;
+  height: 172px;
+  object-fit: contain;
+  background: var(--prod-info-bg);
+}
+@media (max-width: 1399.98px) {
+  .cart-preview-item__thumb {
+    width: 135px;
+    height: 132px;
+  }
+}
+.cart-preview-item__title {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 142.857%;
+  color: var(--dropdown-item-color);
+}
+.cart-preview-item__price {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: var(--dropdown-item-color);
+}
+
+.artice {
+  margin: 30px 0;
+  content: "";
+  display: block;
+  height: 1px;
+  background: #171C28;
+}
+@media (max-width: 991.98px) {
+  .artice {
+    margin: 15px 0;
   }
 }
 

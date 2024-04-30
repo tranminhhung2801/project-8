@@ -27,6 +27,11 @@
     font-weight: 500;
     user-select: none;
 
+    &-small {
+        height: 40px;
+        padding: 0 16px;
+    }
+
     + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
@@ -53,11 +58,7 @@
         border-radius: 99px;
     }
 
-    &[disabled],
-    &-disabled {
-        opacity: 0.5;
-        pointer-events: none;
-    }
+    
 
     &:hover {
         opacity: 0.9;

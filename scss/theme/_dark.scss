@@ -8,11 +8,13 @@ html.dark{
     @include abtracts.screen(sm){
         --body-bg:#292E39;
     }
+
+    --header-shadown : 0px 40px 90px 20px rgba(10, 13, 18, 0.4);
     --header-bg-color:#171C28;
     --top-act-group-bg-color:#292E39;
     --top-act-group-shadow:rgba(0, 0, 0, 0.20);
     --top-act-group-separate:#EDEDF6;
-
+    --header-shadow-color:rgba(237, 237, 246, 0);
     @include abtracts.screen(lg){
         --header-bg-color:#171C28;
         --header-shadow-color:rgba(237, 237, 246, 0);
@@ -74,4 +76,11 @@ html.dark{
         --prod-tag-bg:#171C28;
     }
 
+    --dropdown-item-color:#B9BABE;
+    --dropdown-arrow-color:#292E39:
+
+    --gift-bg:#292E39;
+
+    --dialog-bg: #2f3441;
+    --dialog-shadow: rgba(23, 28, 40, 0.4);
 }

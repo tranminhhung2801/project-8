@@ -27,6 +27,18 @@
         }
         &-current{
             color: var(--slidebar-title);
+            font-weight: 500;
         }
+    }
+
+    &__sreach{
+       background: var(--breadcrmbs-bg);
+       margin-bottom: 20px;
+        display: none;
+       @include abtracts.screen(lg){
+        display: flex;
+            border-radius: 10px;
+            border: none;
+       }
     }
 }
