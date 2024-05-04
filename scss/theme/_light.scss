@@ -6,7 +6,7 @@ html{
     --topbar-bg-color:#EEE;    
     --header-bg-color:#eee;
     --body-bg:#F6F6F6;
-    @include abtracts.screen(sm){
+    @include abtracts.screen(md){
         --body-bg:#f6f6f6;
     }
     --header-shadown : 0px 40px 90px 20px rgba(200, 200, 200, 0.40);
@@ -74,10 +74,21 @@ html{
         --prod-tag-bg:#EDEDF6;
     }
 
+    @include abtracts.screen(lg){
+        --breadcrmbs-bg:#fff;
+        
+    }
+
     --dropdown-item-color:#1A162E;
     --gift-bg:#7644E1;
 
     --dialog-bg: #fff;
     --dialog-shadow: rgba(237, 237, 246, 0.2);
+
+    --separate-bg:#D2D1D6;
+
+    --cancel-color:#1A162E;
+
+    --profile-info-bg:#FFF;
     
 }

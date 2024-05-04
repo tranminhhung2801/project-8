@@ -185,6 +185,13 @@
 
     &__cancel{
         font-size: 1.5rem;
+        
+
+        &-btn{
+            @include abtracts.screen(md){
+                display: none !important;
+            }
+        }
     }
 
     &__result{
