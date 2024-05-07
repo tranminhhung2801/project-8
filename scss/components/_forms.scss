@@ -27,6 +27,25 @@
            
         }
 
+        &-icon{
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--prod-info-bg);
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        &-thumb{
+            background: #fff;
+            object-fit: contain;
+            width: 30px;
+            height: 30px;
+            
+        }
+
         @include abtracts.screen(sm){
             margin-top: 18px;
         }
@@ -44,6 +63,7 @@
     }
     
     &__text-input{
+        position: relative;
         display: flex;
         align-items: center;
         height: 50px;
@@ -156,6 +176,10 @@
             font-size: 14px;
             line-height: 142.857%;
         }
+
+        &-no-margin{
+            margin-bottom: 0px !important;
+        }
     }
 
     &__select-wrap{
@@ -176,6 +200,10 @@
          line-height:  142.857%;
          padding: 0 14px;
          min-width: var(--width,110px);
+
+         &-dialog{
+            width: 300px;
+         }
      }
 
      &__select +&__select{
@@ -207,6 +235,72 @@
 
         @include abtracts.screen(sm){
             padding: 6px 8px;
+        }
+    }
+
+    &__select-dialog {
+        position: absolute;
+        bottom: 58px;
+        left: 10px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 8px;
+
+        transition: opacity, visibility, translate;
+        transition-duration: 0.2s;
+
+        min-width: 230px;
+        max-height: 310px;
+        padding: 10px 0;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+
+        background: #fff;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+    &__options-list {
+        flex: 1;
+        margin-top: 10px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    &__option {
+        padding: 8px 20px;
+        font-size: 1.4rem;
+
+        &--current {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.5);
+        }
+
+        &:not(&--current):hover {
+            background: #ebebeb;
+            cursor: pointer;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d2d1d6;
+        padding: 0 20px 10px;
+
+        &-input {
+            flex: 1;
+        }
+
+        &-icon {
+            width: 16px;
         }
     }
 }

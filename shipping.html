@@ -51,7 +51,7 @@
              <input type="text" name="" id="" placeholder="Search for item" class="filter__form-input breadcrumbs__sreach-bg">
              <img src="./assets/icon/sreach.svg" alt=""  class="filter__form-icon icon ">
           </div>
-          <ul class="breadcrumbs">
+          <ul class="breadcrumbs">  
             <li class="breadcrumbs__item">
               <a href="./index-logined.html" class="breadcrumbs__link"
                 >Home
@@ -94,9 +94,9 @@
                           <p class="shipping-info__address-desc">Where should we deliver your order?</p>
                         </div>
                         <div class="shipping-info__item-btn">
-                          <a href="" class="btn btn-primary btn-rounded">
+                          <button class="btn btn-primary btn-rounded js-toggle" toggle-target="#add-confirm">
                             <img src="./assets/icon/cong.svg" alt="">
-                            Add a new address</a>
+                            Add a new address</button>
                         </div>
                       </div>
                       <div class="shipping-info__edit">
@@ -383,6 +383,196 @@
     <script>
       load("#footer", "./template/footer.html");
     </script>
+<div id="delete-confirm" class="dialog hide">
+  <div class="dialog__content">
+      <div class="dialog__text">Are you sure?</div>
+      <div class="dialog__bottom">
+          <button class="btn btn-small btn-text dialog__btn js-toggle" toggle-target="#delete-confirm">
+              Cancel
+          </button>
+          <button
+              class="btn btn-small btn-primary dialog__btn btn--no-margin js-toggle"
+              toggle-target="#delete-confirm"
+          >
+              Confirm
+          </button>
+      </div>
+  </div>
+  <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+</div>
 
+
+<div id="add-confirm" class="dialog hide">
+  <div class="dialog__content dialog__content-width">
+      <div class="dialog__text">
+        <h2 class="shipping-info__heading">Add new shipping address</h3>
+        <div class="form__row">
+          <div class="form__group">
+            <label
+              for="Name"
+              class="form__label form-card__label"
+            >
+             Full name
+            </label>
+            <div class="form__text-input">
+              <input
+                type="text"
+                name=""
+                id="Name"
+                placeholder="Name"
+                class="form__input"
+                required
+                autofocus
+              />
+              <img
+                src="./assets/icons/form-error.svg"
+                alt=""
+                class="form__input-icon-error"
+              />
+            </div>
+            <p class="form__error">
+              Please enter your full-name name
+            </p>
+          </div>
+          <div class="form__group">
+            <label
+              for="Phone"
+              class="form__label form-card__label"
+            >
+             Phone
+            </label>
+            <div class="form__text-input">
+              <input
+                type="text"
+                name=""
+                id="Phone"
+                placeholder="Phone"
+                class="form__input"
+                required
+                autofocus
+              />
+              <img
+                src="./assets/icons/form-error.svg"
+                alt=""
+                class="form__input-icon-error"
+              />
+            </div>
+            <p class="form__error">
+              Please enter your Phone
+            </p>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label
+              for="address"
+              class="form__label form-card__label"
+            >
+             Address
+            </label>
+            <div class="form__text-input">
+              <input
+                type="text"
+                name=""
+                id="address"
+                placeholder="Address and street"
+                class="form__input"
+                required
+                autofocus
+              />
+              <img
+                src="./assets/icons/form-error.svg"
+                alt=""
+                class="form__input-icon-error"
+              />
+            </div>
+            <p class="form__error">
+              Please enter your address
+            </p>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label
+              for="address"
+              class="form__label form-card__label"
+            >
+             City/District/Town
+            </label>
+            <div class="form__text-input">
+              <input
+                type="text"
+                name=""
+                id="city"
+                placeholder="City/District/Town"
+                class="form__input js-toggle"
+                required
+                readonly
+                toggle-target="#city-confirm"
+              />
+              <img
+                src="./assets/icons/form-error.svg"
+                alt=""
+                class="form__input-icon-error"
+              />
+              <div id="city-confirm" class="form__select-dialog hide">
+                <h2 class="form__dialog-heading">City/District/Town</h2>
+                <div class="form__search">
+                  <input type="text" placeholder="Search" class="form__search-input" />
+                  <img src="./assets/icon/sreach.svg" alt="" class="form__search-icon" />
+                </div>
+               <ul class="form__options-list">
+                  <li class="form__option">Đà Nẵng</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+                  <li class="form__option">Huế</li>
+                  <li class="form__option">Hồ Chí Minh</li>
+                  <li class="form__option">Hà Nội</li>
+                  <li class="form__option">Nha Trang</li>
+               </ul>
+              </div>
+            </div>
+            <p class="form__error">
+              Please enter your City/District/Town
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="dialog__bottom">
+          <button class="btn btn-small btn-text dialog__btn js-toggle" toggle-target="#add-confirm">
+              Cancel
+          </button>
+          <button
+              class="btn btn-small btn-primary dialog__btn btn--no-margin js-toggle"
+              toggle-target="#add-confirm"
+          >
+              Confirm
+          </button>
+      </div>
+  </div>
+  <div class="dialog__overlay js-toggle" toggle-target="#add-confirm"></div>
+</div>
   </body>
 </html>

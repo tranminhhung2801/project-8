@@ -15,7 +15,7 @@
       href="./assets/favicon/favicon-32x32.png"
     />
     <link
-      rel="icon"  
+      rel="icon"
       type="image/png"
       sizes="16x16"
       href="./assets/favicon/favicon-16x16.png"
@@ -34,7 +34,7 @@
 
     <!--Scripts-->
     <script src="./assets/js/scripts.js"></script>
-    <title>Profile | Grocery Mart</title>
+    <title>Personal info | Grocery Mart</title>
   </head>
   <body>
     <header id="header" class="header"></header>
@@ -65,7 +65,7 @@
           <!--product info-->
           <div class="profile-container">
             <div class="row row-cols-md-1">
-              <div class="col-3 col-xl-4 col-lg-5">
+              <div class="col-3 col-xl-4 col-lg-5 d-sm-none">
                 <aside class="profile__slidebar">
                   <!--user-->
                   <div class="profile-user">
@@ -82,7 +82,7 @@
                     <h3 class="profile-menu__title">Manage Account</h3>
                     <ul class="profile-menu__list">
                       <li>
-                        <a href="./Personal-info.html" class="profile-menu__link">
+                        <a href="#!" class="profile-menu__link">
                           <span class="profile-menu__icon">
                             <img
                               src="./assets/icon/profile/profile.svg"
@@ -106,7 +106,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="./commu-privacy.html" class="profile-menu__link">
+                        <a href="#!" class="profile-menu__link">
                           <span class="profile-menu__icon">
                             <img
                               src="./assets/icon/profile/message.svg"
@@ -218,167 +218,48 @@
                 <div class="cart-info">
                   <div class="row gy-3">
                     <div class="col-12">
-                      <h2 class="cart-info__heading">My Wallet</h2>
-                      <p class="cart-info__desc profile__desc">
-                        Payment methods
-                      </p>
-                      <div class="row row-cols-3 row-cols-xl-2 row-cols-lg-1">
-                        <!-- Payment card 1 -->
-                        <div class="col ">
-                          <article
-                            class="payment-card"
-                            style="--bg-color: #1e2e69"
-                          >
-                            <img
-                              src="./assets/img/card/plane-bg.svg"
-                              alt=""
-                              class="payment-card__img"
-                            />
-                            <div class="payment-card__top">
-                              <img src="./assets/img/card/plane.svg" alt="" />
-                              <span class="payment-card__type"
-                                >FeatherCard</span
-                              >
-                            </div>
-                            <div class="payment-card__number">
-                              1234 4567 8901 2221
-                            </div>
-                            <div class="payment-card__bottom">
-                              <div>
-                                <p class="payment-card__label">Card Holder</p>
-                                <p class="payment-card__value">Imran Khan</p>
-                              </div>
-                              <div class="payment-card__expired">
-                                <p class="payment-card__label">Expired</p>
-                                <p class="payment-card__value">10/22</p>
-                              </div>
-                              <div class="payment-card__circle"></div>
-                            </div>
-                          </article>
-                        </div>
-
-                        <!-- Payment card 2 -->
-                        <div class="col">
-                          <article
-                            class="payment-card"
-                            style="--bg-color: #354151"
-                          >
-                            <img
-                              src="./assets/img/card/leaf-bg.svg"
-                              alt=""
-                              class="payment-card__img"
-                            />
-                            <div class="payment-card__top">
-                              <img src="./assets/img/card/leaf.svg" alt="" />
-                              <span class="payment-card__type"
-                                >FeatherCard</span
-                              >
-                            </div>
-                            <div class="payment-card__number">
-                              1234 4567 2221 8901
-                            </div>
-                            <div class="payment-card__bottom">
-                              <div>
-                                <p class="payment-card__label">Card Holder</p>
-                                <p class="payment-card__value">Imran Khan</p>
-                              </div>
-                              <div class="payment-card__expired">
-                                <p class="payment-card__label">Expired</p>
-                                <p class="payment-card__value">11/22</p>
-                              </div>
-                              <div class="payment-card__circle"></div>
-                            </div>
-                          </article>
-                        </div>
-
-                        <!-- Add new payment card -->
-                        <div class="col">
-                          <a class="new-card" href="./add-new-card.html">
-                            <img
-                              src="./assets/icons/plus.svg"
-                              alt=""
-                              class="new-card__icon"
-                            />
-                            <p class="new-card__text">Add New Card</p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <h2 class="cart-info__heading">Account info</h2>
-                      <p class="cart-info__desc profile__desc">
-                        Addresses, contact information and password
-                      </p>
-                      <div class="row row-cols-2 row-cols-lg-1">
-                        <div class="col-6">
-
-                          <!--Account 1-->
-                          <article class="account-info">
+                      <h2 class="cart-info__heading">
+                        <a href="./profile.html">
+                          <img src="./assets/icon/arrow-back.svg" alt="" class="cart-info__backarrow icon">
+                        </a>
+                        Communications & privacy
+                      </h2>
+                      <form action="" class="form form-card">
+                        <div class="form__row">
+                          <div class="form__group-icon">
                             <div class="account-info__icon">
-                              <img src="./assets/icon/profile/message.svg" alt="" class="icon">
-                              </div>
-                              <div>
-                                <h3 class="account-info__title">Email Address</h3>
-                                <p class="account-info__desc">tarek97.ta@gmail.com</p>
-                              </div>
-                           
-                          </article>
-                        </div>
-                        <div class="col-6">
-                          <!--Account 2-->
-                          <article class="account-info">
-                            <div class="account-info__icon">
-                              <img src="./assets/icon/profile/call.svg" alt="" class="icon">
-                              </div>
-                              <div>
-                                <h3 class="account-info__title">Phone number</h3>
-                                <p class="account-info__desc">+000 11122 2345 657</p>
-                              </div>
-                            
-                          </article>
-                        </div>
-                        <div class="col-6">
-                          <!--Account 3-->
-                          <article class="account-info">
-                            <div class="account-info__icon">
-                              <img src="./assets/icon/profile/address.svg" alt="" class="icon">
-                              </div>
-                              <div>
-                                <h3 class="account-info__title">Add an address</h3>
-                                <p class="account-info__desc">Bangladesh Embassy, Washington, DC 20008</p>
-                              </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <h2 class="cart-info__heading">Lists</h2>
-                      <p class="cart-info__desc profile__desc">
-                        2 items - Primary
-                      </p>
-                      <!--Favourite item 1-->
-                      <article class="favourite-item">
-                        <img src="./assets/img/cate-row/image - UIHUT.png" alt="" class="favourite-item__thumb">
-                        <div>
-                          <h3 class="favourite-item__title">Coffee Beans - Espresso Arabica and Robusta Beans</h3>
-                          <div class="favourite-item__content">
-                            <span class="favourite-item__price">$47.00</span>
-                            <button class="btn btn-primary btn-rounded">Add to cart</button>
+                              <img src="./assets/img/footer/facebook.svg" alt="" class="form__group-thumb">
+                            </div>
+                            <h3 class="form__label form-card__label form__label-no-margin">Facebook</h3>
                           </div>
-                      </article>
-                      <div class="favourite-item__separate"></div>
-                      <!--Favourite item 2-->
-                      <article class="favourite-item">
-                        <img src="./assets/img/cate-row/image - UIHUT (1).png" alt="" class="favourite-item__thumb">
-                        <div>
-                          <h3 class="favourite-item__title">Coffee Beans - Espresso Arabica and Robusta Beans</h3>
-                          <div class="favourite-item__content">
-                            <span class="favourite-item__price">$47.00</span>
-                            <button class="btn btn-primary btn-rounded">Add to cart</button>
+                          <div class="form__group-icon">
+                            <div class="account-info__icon">
+                            <img src="./assets/img/footer/twitter.svg" alt="" class="form__group-thumb">
+                            </div>
+                            <h3 class="form__label form-card__label form__label-no-margin">Twitter</h3>
                           </div>
                         </div>
-                      </article>
-                      </div>
+                        <div class="form__row">
+                          <div class="form__group-icon">
+                            <div class="account-info__icon">
+                            <img src="./assets/img/footer/tiktok.svg" alt="" class="form__group-thumb">
+                            </div>
+                            <h3 class="form__label form-card__label form__label-no-margin">TikTok</h3>
+                          </div>
+                          <div class="form__group-icon">
+                            <div class="account-info__icon">
+                            <img src="./assets/img/footer/youtube.svg" alt="" class="form__group-thumb">
+                            </div>
+                            <h3 class="form__label form-card__label form__label-no-margin">Youtube</h3>
+                          </div>
+                        </div>
+                        
+                        <div class="form-card__bottom">
+                          <button class="btn btn-text form-card__cancel">Cancel</button>
+                          <button class="btn btn-primary btn-rounded">
+                            <a href="./profile.html">Save card</a></button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
