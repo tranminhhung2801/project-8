@@ -163,30 +163,34 @@
                         >Size/Weight</label
                       >
                       <div class="filter__form-group">
-                        <div class="form__select-wrap" style="width: 250px">
-                          <div class="form__select" style="--width: 146px">
-                            500g
-                            <img
-                              src="./assets/icon/Arrow - Down 2.svg"
-                              alt=""
-                              class="form__select-arrow"
-                            />
+                        <div class="form__select-wrap" style="width: 250px;">
+                          <div class="form__select form__select-amount" style="--width:146px;">
+                            <span class="form__span">500</span>
+                            <img src="./assets/icon/Arrow - Down 2.svg" alt="" class="form__select-arrow">
+                            <ul class="form__amount-list list">
+                              <li class="form__amount option">100</li>
+                              <li class="form__amount option">300</li>
+                              <li class="form__amount option">500</li>
+                              <li class="form__amount option">700</li>
+                            </ul>
                           </div>
-                          <div class="form__select">
-                            Gram
-                            <img
-                              src="./assets/icon/Arrow - Down 2.svg"
-                              alt=""
-                              class="form__select-arrow"
-                            />
+                          <div class="form__select form__select-mass">
+                            <span class="form__span">Gram</span>
+                            <img src="./assets/icon/Arrow - Down 2.svg" alt="" class="form__select-arrow">
+                            <ul class="form__mass-list list">
+                              <li class="form__mass option">Kg</li>
+                              <li class="form__mass option">Hg</li>
+                              <li class="form__mass option">Dag</li>
+                              <li class="form__mass option">Gram</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                       <div class="filter__form-group">
                         <div class="form__tags">
-                          <button class="form__tag prod-info__tag">
+                          <p class="form__tag prod-info__tag">
                             Small
-                          </button>
+                          </p>
                           <button class="form__tag prod-info__tag">
                             Medium
                           </button>
@@ -994,5 +998,7 @@
     <script>
       load("#footer", "./template/footer.html");
     </script>
+    <script src="./assets/js/index-logined.js"></script>
+    <script src="./assets/js/slide-prodduct-detail.js"></script>
   </body>
 </html>

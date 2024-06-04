@@ -239,6 +239,8 @@
             display: flex;
             gap: 10px;
         }
+
+        
     }
 
     &__total-price {
@@ -267,6 +269,10 @@
         &:first-child {
             margin-right: 10px;
         }
+    }
+
+    &__text{
+        max-width: 25px;
     }
     
 }
@@ -315,4 +321,8 @@
     width: 18.5px;
     height: 18.5px;
     flex-shrink: 0;
+}
+
+#amount{
+    text-align: center;
 }

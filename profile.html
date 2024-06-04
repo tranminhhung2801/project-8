@@ -222,7 +222,18 @@
                       <p class="cart-info__desc profile__desc">
                         Payment methods
                       </p>
-                      <div class="row row-cols-3 row-cols-xl-2 row-cols-lg-1">
+                      <div class="row row-cols-3 row-cols-xl-2 row-cols-lg-1" id="cardContainer">
+                        <!-- Add new payment card -->
+                        <div class="col">
+                          <a class="new-card" href="./add-new-card.html">
+                            <img
+                              src="./assets/icons/plus.svg"
+                              alt=""
+                              class="new-card__icon"
+                            />
+                            <p class="new-card__text">Add New Card</p>
+                          </a>
+                        </div>  
                         <!-- Payment card 1 -->
                         <div class="col ">
                           <article
@@ -254,54 +265,10 @@
                               </div>
                               <div class="payment-card__circle"></div>
                             </div>
+                            <button class="payment-card__delete">X</button>
                           </article>
                         </div>
-
-                        <!-- Payment card 2 -->
-                        <div class="col">
-                          <article
-                            class="payment-card"
-                            style="--bg-color: #354151"
-                          >
-                            <img
-                              src="./assets/img/card/leaf-bg.svg"
-                              alt=""
-                              class="payment-card__img"
-                            />
-                            <div class="payment-card__top">
-                              <img src="./assets/img/card/leaf.svg" alt="" />
-                              <span class="payment-card__type"
-                                >FeatherCard</span
-                              >
-                            </div>
-                            <div class="payment-card__number">
-                              1234 4567 2221 8901
-                            </div>
-                            <div class="payment-card__bottom">
-                              <div>
-                                <p class="payment-card__label">Card Holder</p>
-                                <p class="payment-card__value">Imran Khan</p>
-                              </div>
-                              <div class="payment-card__expired">
-                                <p class="payment-card__label">Expired</p>
-                                <p class="payment-card__value">11/22</p>
-                              </div>
-                              <div class="payment-card__circle"></div>
-                            </div>
-                          </article>
-                        </div>
-
-                        <!-- Add new payment card -->
-                        <div class="col">
-                          <a class="new-card" href="./add-new-card.html">
-                            <img
-                              src="./assets/icons/plus.svg"
-                              alt=""
-                              class="new-card__icon"
-                            />
-                            <p class="new-card__text">Add New Card</p>
-                          </a>
-                        </div>
+                       
                       </div>
                     </div>
                     <div class="col-12">
@@ -311,17 +278,18 @@
                       </p>
                       <div class="row row-cols-2 row-cols-lg-1">
                         <div class="col-6">
-
                           <!--Account 1-->
                           <article class="account-info">
                             <div class="account-info__icon">
                               <img src="./assets/icon/profile/message.svg" alt="" class="icon">
                               </div>
-                              <div>
+                              <div class="account-info__right">
+                               <div>
                                 <h3 class="account-info__title">Email Address</h3>
                                 <p class="account-info__desc">tarek97.ta@gmail.com</p>
+                               </div>
+                               <img src="./assets/icon/edit.svg" alt="" class="icon account-info__edit">
                               </div>
-                           
                           </article>
                         </div>
                         <div class="col-6">
@@ -330,11 +298,13 @@
                             <div class="account-info__icon">
                               <img src="./assets/icon/profile/call.svg" alt="" class="icon">
                               </div>
-                              <div>
-                                <h3 class="account-info__title">Phone number</h3>
-                                <p class="account-info__desc">+000 11122 2345 657</p>
-                              </div>
-                            
+                              <div class="account-info__right">
+                                <div>
+                                  <h3 class="account-info__title">Phone number</h3>
+                                  <p class="account-info__desc">+000 11122 2345 657</p>
+                                </div>
+                                <img src="./assets/icon/edit.svg" alt="" class="icon account-info__edit">
+                              </div>       
                           </article>
                         </div>
                         <div class="col-6">
@@ -343,9 +313,27 @@
                             <div class="account-info__icon">
                               <img src="./assets/icon/profile/address.svg" alt="" class="icon">
                               </div>
-                              <div>
-                                <h3 class="account-info__title">Add an address</h3>
+                              <div class="account-info__right">
+                                <div>
+                                  <h3 class="account-info__title">Add an address</h3>
                                 <p class="account-info__desc">Bangladesh Embassy, Washington, DC 20008</p>
+                                </div>
+                                <img src="./assets/icon/edit.svg" alt="" class="icon account-info__edit">
+                              </div>
+                          </article>
+                        </div>
+                        <div class="col-6">
+                          <!--Account 4-->
+                          <article class="account-info">
+                            <div class="account-info__icon">
+                              <img src="./assets/icon/profile/password.png" alt="" class="icon">
+                              </div>
+                              <div class="account-info__right">
+                                <div>
+                                  <h3 class="account-info__title">Password</h3>
+                                <p class="account-info__desc">*******</p>
+                                </div>
+                                <img src="./assets/icon/edit.svg" alt="" class="icon account-info__edit">
                               </div>
                           </article>
                         </div>
@@ -403,7 +391,7 @@
             toggle-target="#delete-confirm"
           >
             Cancel
-          </button>
+          </button> 
           <button
             class="btn btn-small btn-primary dialog__btn btn--no-margin js-toggle"
             toggle-target="#delete-confirm"
@@ -417,5 +405,6 @@
         toggle-target="#delete-confirm"
       ></div>
     </div>
+    <script src="./assets/js/local/display-card.js"></script>
   </body>
 </html>

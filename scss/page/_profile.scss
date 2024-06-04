@@ -89,7 +89,7 @@
             border-radius: 5px;
 
             &:hover{
-                background: #ebebeb;
+                background: var(--cancel-color);
             }
         }
 
@@ -98,4 +98,10 @@
     &__desc {
         margin-bottom: 16px;
     }
+}
+
+.btn-delete{
+    position: relative;
+    top: 0;
+    bottom: 0;
 }

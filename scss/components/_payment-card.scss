@@ -91,6 +91,16 @@
             background: #ffb700;
         }
     }
+
+    &__delete{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+   
+     
+
+    }
 }
 
 .new-card {

@@ -224,7 +224,7 @@
                         </a>
                         Add credit or debit card
                       </h2>
-                      <form action="" class="form form-card">
+                      <form action="" class="form form-card" id="cardForm">
                         <div class="form__row">
                           <div class="form__group">
                             <label
@@ -312,7 +312,7 @@
                             </label>
                             <div class="form__text-input">
                               <input
-                                type="text"
+                                type="date"
                                 name=""
                                 id="expiration-date"
                                 placeholder="MM/YY"
@@ -386,7 +386,7 @@
                         </div>
                         <div class="form-card__bottom">
                           <button class="btn btn-text form-card__cancel">Cancel</button>
-                          <button class="btn btn-primary btn-rounded">Save card</button>
+                          <button type="submit" class="btn btn-primary btn-rounded">Save card</button>
                         </div>
                       </form>
                     </div>
@@ -427,5 +427,6 @@
         toggle-target="#delete-confirm"
       ></div>
     </div>
+    <script src="./assets/js/local/add-card.js"></script>
   </body>
 </html>

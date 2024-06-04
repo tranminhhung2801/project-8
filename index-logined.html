@@ -176,21 +176,33 @@
                     <label for="" class="form__label">Size/Weight</label>
                     <div class="filter__form-group">
                       <div class="form__select-wrap">
-                        <div class="form__select" style="--width:159px;">
-                          500g
+                        <div class="form__select form__select-amount" style="--width:159px;">
+                          <span class="form__span">500</span>
                           <img src="./assets/icon/Arrow - Down 2.svg" alt="" class="form__select-arrow">
+                          <ul class="form__amount-list list">
+                            <li class="form__amount option">100</li>
+                            <li class="form__amount option">300</li>
+                            <li class="form__amount option">500</li>
+                            <li class="form__amount option">700</li>
+                          </ul>
                         </div>
-                        <div class="form__select">
-                          Gram
+                        <div class="form__select form__select-mass">
+                          <span class="form__span">Gram</span>
                           <img src="./assets/icon/Arrow - Down 2.svg" alt="" class="form__select-arrow">
+                          <ul class="form__mass-list list">
+                            <li class="form__mass option">Kg</li>
+                            <li class="form__mass option">Hg</li>
+                            <li class="form__mass option">Dag</li>
+                            <li class="form__mass option">Gram</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                     <div class="filter__form-group">
                       <div class="form__tags">
-                        <button class="form__tag">Small</button>
-                        <button class="form__tag">Media</button>
-                        <button class="form__tag">Large</button>
+                        <button class="form__tag" data-value="100">Small</button>
+                        <button class="form__tag" data-value="500">Media</button>
+                        <button class="form__tag" data-value="700">Large</button>
                       </div>
                     </div>
                   </div>
@@ -386,5 +398,6 @@
       <script>
         load("#footer", "./template/footer.html");
       </script>
+      <script src="./assets/js/index-logined.js"></script>
   </body>
 </html>
